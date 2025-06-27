@@ -1,0 +1,84 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* CSS Custom Properties for colors */
+:root {
+  /* Sophisticated earth-tone palette */
+  --color-palette-night: #171614;     /* Night */
+  --color-palette-bistre: #3A2618;    /* Bistre */
+  --color-palette-garnet: #754043;    /* Garnet */
+  --color-palette-beaver: #9A8873;    /* Beaver */
+  --color-palette-olive: #37423D;     /* Black olive */
+  
+  /* Semantic color mappings */
+  --bg-primary: var(--color-palette-night);
+  --bg-secondary: var(--color-palette-bistre);
+  --text-primary: #FFFFFF;
+  --text-secondary: var(--color-palette-beaver);
+  --text-highlight: var(--color-palette-garnet);
+  --border-default: var(--color-palette-olive);
+  --border-hover: var(--color-palette-garnet);
+}
+
+/* Ensure no white space at bottom */
+html, body {
+  min-height: 100vh;
+  background-color: var(--bg-primary);
+}
+
+/* Smooth scrolling for anchor links */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.scrollbar-hide {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+/* Wave animations */
+@keyframes wave-slow {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes wave-medium {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes wave-fast {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-wave-slow {
+  animation: wave-slow 25s ease-in-out infinite;
+}
+
+.animate-wave-medium {
+  animation: wave-medium 20s ease-in-out infinite;
+}
+
+.animate-wave-fast {
+  animation: wave-fast 15s ease-in-out infinite;
+} 
